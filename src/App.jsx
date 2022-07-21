@@ -3,7 +3,7 @@ import ResponsiveAppBar from "./components/NavBar";
 import { ThemeProvider, createTheme } from "@mui/material/styles";
 import Start from "./components/Start";
 import React, { useState, useEffect } from "react";
-
+import { AnimatePresence } from "framer-motion";
 const darkTheme = createTheme({
   palette: {
     mode: "dark",
@@ -25,7 +25,9 @@ function App() {
   return (
     <ThemeProvider theme={darkTheme}>
       {loading ? (
-        <Start handleStart={handleStart} />
+        <AnimatePresence exitBeforeEnter>
+          <Start handleStart={handleStart} />
+        </AnimatePresence>
       ) : (
         <div className="App">
           <ResponsiveAppBar />
