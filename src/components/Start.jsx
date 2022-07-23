@@ -13,12 +13,6 @@ const animationConfiguration = {
 
 function Start() {
   return (
-    // <motion.div
-    //   variants={animationConfiguration}
-    //   initial="initial"
-    //   animate="animate"
-    //   exit="exit"
-    // >
     <motion.div
       className="Start css-selector"
       variants={animationConfiguration}
@@ -32,7 +26,6 @@ function Start() {
         staggerChildren: 0.1,
       }}
     >
-      {/* <div className="loading"> */}
       <Typewriter
         options={{
           strings: ["< > Ausbel Dev < / >"],
@@ -48,9 +41,7 @@ function Start() {
       <Link to="/home">
         <StartButton />
       </Link>
-      {/* </div> */}
     </motion.div>
-    // </motion.div>
   );
 }
 
