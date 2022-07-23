@@ -2,6 +2,7 @@ import React from "react";
 import "../App.css";
 import ResponsiveAppBar from "./NavBar";
 import { motion } from "framer-motion";
+import Typewriter from "typewriter-effect";
 
 const animationConfiguration = {
   initial: { opacity: 0 },
@@ -26,7 +27,13 @@ function Home() {
     >
       <ResponsiveAppBar />
       <div>
-        <h1>Hello World!</h1>
+        <Typewriter
+          options={{
+            strings: ["<h1>Hello <br/> World!</h1>"],
+            autoStart: true,
+            stop: true,
+          }}
+        />
       </div>
     </motion.div>
   );
