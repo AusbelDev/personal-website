@@ -26,15 +26,6 @@ function Home() {
       }}
     >
       <ResponsiveAppBar />
-      <div>
-        <Typewriter
-          options={{
-            strings: ["<h1>Hello <br/> World!</h1>"],
-            autoStart: true,
-            stop: true,
-          }}
-        />
-      </div>
     </motion.div>
   );
 }

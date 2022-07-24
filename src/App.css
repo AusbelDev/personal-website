@@ -31,11 +31,11 @@
 }
 
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@800&display=swap");
-h1 {
+.head {
   margin: 0;
   font-family: Roboto, Arial;
-  font-size: 17vw;
-  text-align: left;
+  font-size: vw;
+  /* text-align: left; */
   letter-spacing: 1vw;
   position: relative;
   top: 5vh;
@@ -52,7 +52,7 @@ h1 {
   -webkit-text-stroke-color: white; */
   animation: shine 8s linear infinite;
 }
-h1:nth-child(2) {
+.head:nth-child(2) {
   top: 20vh;
 }
 @keyframes shine {
@@ -62,4 +62,10 @@ h1:nth-child(2) {
   to {
     background-position: center 200%;
   }
+}
+
+.box {
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }

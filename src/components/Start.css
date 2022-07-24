@@ -2,7 +2,7 @@
 .loading {
   --color: #f5f9ff;
   --duration: 2000ms;
-  font-family: Roboto, Arial;
+  font-family: "Ubuntu Mono", monospace;
   font-size: 24px;
   position: relative;
   /* top: 50%;

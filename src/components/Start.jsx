@@ -1,9 +1,12 @@
-import React from "react";
+import React, { useCallback } from "react";
 import "./Start.css";
 import Typewriter from "typewriter-effect";
 import StartButton from "./StartButton";
 import { Link } from "react-router-dom";
 import { motion } from "framer-motion";
+import Particles from "react-tsparticles";
+import { loadFull } from "tsparticles";
+import particlesOptions from "./particles.json";
 
 const animationConfiguration = {
   initial: { opacity: 1 },
@@ -12,6 +15,9 @@ const animationConfiguration = {
 };
 
 function Start() {
+  const particlesInit = useCallback((main) => {
+    loadFull(main);
+  }, []);
   return (
     <motion.div
       className="Start css-selector"
@@ -26,9 +32,10 @@ function Start() {
         staggerChildren: 0.1,
       }}
     >
+      <Particles options={particlesOptions} init={particlesInit} />
       <Typewriter
         options={{
-          strings: ["< > Ausbel Dev < / >"],
+          strings: ["< > Ausbel Dev < >"],
           autoStart: true,
           loop: true,
           wrapperClassName: "loading",
