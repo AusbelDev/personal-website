@@ -50,6 +50,7 @@ function TextList() {
     <AnimatePresence exitBeforeEnter>
       <motion.h2
         className="head"
+        style={{ fontFamily: "Glegoo, serif", color: "#334756" }}
         key={index}
         variants={textAnimationConfig}
         initial="enter"
@@ -85,7 +86,7 @@ function Home() {
 
       <Container maxWidth="false" sx={{ marginTop: "10%" }}>
         <h1 className="head">
-          <span>Welcome to my world</span>
+          <span>Welcome to my world!</span>
         </h1>
         <h1 className="head">I'am Λusbel</h1>
         <TextList />

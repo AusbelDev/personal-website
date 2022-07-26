@@ -11,7 +11,7 @@ button {
   background: transparent;
   padding: 0;
   font-size: inherit;
-  font-family: "Mukta";
+  font-family: "Kanit", sans-serif;
 }
 button.learn-more {
   width: 12rem;

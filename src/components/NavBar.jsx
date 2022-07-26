@@ -48,7 +48,7 @@ const ResponsiveAppBar = () => {
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
+              fontFamily: "Ubuntu, monospace",
               fontWeight: 700,
               letterSpacing: ".3rem",
               color: "inherit",
@@ -104,7 +104,7 @@ const ResponsiveAppBar = () => {
               mr: 2,
               display: { xs: "flex", md: "none" },
               flexGrow: 1,
-              fontFamily: "monospace",
+              fontFamily: "Ubuntu, monospace",
               fontWeight: 700,
               letterSpacing: ".3rem",
               color: "inherit",
@@ -118,7 +118,12 @@ const ResponsiveAppBar = () => {
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
+                sx={{
+                  my: 2,
+                  color: "white",
+                  display: "block",
+                  fontFamily: "Kanit, sans-serif",
+                }}
               >
                 {page}
               </Button>

@@ -52,7 +52,7 @@ function Start() {
         style={{
           top: "40%",
           position: "relative",
-          fontFamily: "Ubuntu, monospace",
+          fontFamily: "Kanit, sans-serif",
           color: "#2C394B",
         }}
       >

@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&family=Kanit&display=swap");
+
 .App {
   text-align: center;
   /* background-color: #000000;
@@ -37,9 +39,9 @@
   font-size: 8vw;
   margin: 0;
 }
-@import url("https://fonts.googleapis.com/css?family=Mukta:700");
+
 .head span {
   color: #334756;
   font-size: 3vw;
-  font-family: "Mukta";
+  font-family: "Glegoo", serif;
 }
