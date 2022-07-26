@@ -48,6 +48,16 @@ function Start() {
       <Link to="/home">
         <StartButton />
       </Link>
+      <footer
+        style={{
+          top: "40%",
+          position: "relative",
+          fontFamily: "Ubuntu, monospace",
+          color: "#2C394B",
+        }}
+      >
+        ©Ausbel 2022
+      </footer>
     </motion.div>
   );
 }

@@ -9,7 +9,7 @@
   bottom: 0px;
   left: 0px; */
   /* background: radial-gradient(ellipse at bottom, #022227 0%, #000 100%); */
-  background: radial-gradient(ellipse at bottom, #022227 0%, #000 100%)
+  background: radial-gradient(ellipse at bottom, #082032 0%, #000 100%)
     no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -30,42 +30,16 @@
   flex-direction: column;
 }
 
-@import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@800&display=swap");
 .head {
+  text-align: left;
+  color: #ff4c29;
+  font-family: "Ubuntu", monospace;
+  font-size: 8vw;
   margin: 0;
-  font-family: Roboto, Arial;
-  font-size: vw;
-  /* text-align: left; */
-  letter-spacing: 1vw;
-  position: relative;
-  top: 5vh;
-  left: 50%;
-  transform: translateX(-50%);
-  color: white;
-  background: url("https://static.vecteezy.com/system/resources/previews/006/329/830/large_2x/abstract-line-like-falling-rain-white-color-background-illustration-photo.jpg");
-  background-size: auto 200%;
-  background-clip: text;
-  /* text-fill-color: transparent; */
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  /* -webkit-text-stroke-width: 1px;
-  -webkit-text-stroke-color: white; */
-  animation: shine 8s linear infinite;
 }
-.head:nth-child(2) {
-  top: 20vh;
-}
-@keyframes shine {
-  from {
-    background-position: center 0;
-  }
-  to {
-    background-position: center 200%;
-  }
-}
-
-.box {
-  display: flex;
-  flex-direction: column;
-  position: relative;
+@import url("https://fonts.googleapis.com/css?family=Mukta:700");
+.head span {
+  color: #334756;
+  font-size: 3vw;
+  font-family: "Mukta";
 }

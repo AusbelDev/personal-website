@@ -25,10 +25,10 @@
     },
     "particles": {
       "color": {
-        "value": "#eb6e34"
+        "value": "#ff4c29"
       },
       "links": {
-        "color": "#eb8934",
+        "color": "#ff4c29",
         "distance": 150,
         "enable": true,
         "opacity": 0.5,
@@ -44,7 +44,7 @@
           "default": "bounce"
         },
         "random": false,
-        "speed": 3,
+        "speed": 2,
         "straight": false
       },
       "number": {

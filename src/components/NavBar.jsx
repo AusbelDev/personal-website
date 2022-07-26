@@ -37,7 +37,7 @@ const ResponsiveAppBar = () => {
 
   return (
     <AppBar position="static">
-      <Container maxWidth="xl">
+      <Container maxWidth="false">
         <Toolbar disableGutters>
           <CodeIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} />
           <Typography
