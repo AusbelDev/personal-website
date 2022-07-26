@@ -35,7 +35,7 @@ function Start() {
       <Particles options={particlesOptions} init={particlesInit} />
       <Typewriter
         options={{
-          strings: ["< > Ausbel Dev < >"],
+          strings: ["< > Λusbel Dev < >"],
           autoStart: true,
           loop: true,
           wrapperClassName: "loading",

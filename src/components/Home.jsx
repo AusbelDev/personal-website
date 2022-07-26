@@ -87,7 +87,7 @@ function Home() {
         <h1 className="head">
           <span>Welcome to my world</span>
         </h1>
-        <h1 className="head">I'am Ausbel</h1>
+        <h1 className="head">I'am Λusbel</h1>
         <TextList />
       </Container>
     </motion.div>
