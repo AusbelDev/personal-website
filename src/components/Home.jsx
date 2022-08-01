@@ -50,7 +50,7 @@ function TextList() {
     <AnimatePresence exitBeforeEnter>
       <motion.h2
         className="head"
-        style={{ fontFamily: "Glegoo, serif", color: "#334756" }}
+        style={{ fontFamily: "Glegoo, serif", color: "white" }}
         key={index}
         variants={textAnimationConfig}
         initial="enter"
@@ -84,12 +84,60 @@ function Home() {
     >
       <ResponsiveAppBar />
 
-      <Container maxWidth="false" sx={{ marginTop: "10%" }}>
+      <Container maxWidth="lg" sx={{ marginTop: "5%" }}>
         <h1 className="head">
           <span>Welcome to my world!</span>
         </h1>
         <h1 className="head">I'am Λusbel</h1>
         <TextList />
+      </Container>
+
+      <Container maxWidth="lg" sx={{ display: "flex", alignItems: "center" }}>
+        <h1 className="about-header">ABOUT</h1>
+        <div
+          style={{
+            height: "1px",
+            width: "100%",
+            backgroundColor: "#334756",
+          }}
+        ></div>
+      </Container>
+
+      <Container maxWidth="lg" sx={{ display: "flex", alignItems: "center" }}>
+        <h1 className="portfolio-header">PROJECTS</h1>
+        <div
+          style={{
+            height: "1px",
+            width: "100%",
+            backgroundColor: "#334756",
+          }}
+        ></div>
+      </Container>
+      <Container maxWidth="lg" sx={{ display: "flex", alignItems: "center" }}>
+        <h1 className="contact-header">CONTACT</h1>
+        <div
+          style={{
+            height: "1px",
+            width: "100%",
+            backgroundColor: "#334756",
+          }}
+        ></div>
+      </Container>
+
+      <Container
+        maxWidth="lg"
+        sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
+      >
+        <footer
+          style={{
+            position: "relative",
+            fontFamily: "Kanit, sans-serif",
+            color: "#2C394B",
+            textAlign: "center",
+          }}
+        >
+          ©Ausbel 2022
+        </footer>
       </Container>
     </motion.div>
   );

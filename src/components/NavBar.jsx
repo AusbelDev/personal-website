@@ -11,8 +11,8 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
-import CodeIcon from "@mui/icons-material/Code";
-import { NearMeDisabledTwoTone } from "@mui/icons-material";
+// import CodeIcon from "@mui/icons-material/Code";
+// import { NearMeDisabledTwoTone } from "@mui/icons-material";
 
 const pages = ["About Me", "Portfolio", "Contact Me"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
@@ -38,7 +38,7 @@ const ResponsiveAppBar = () => {
   };
 
   return (
-    <AppBar position="static">
+    <AppBar position="static" sx={{ justifyContent: "center" }}>
       <Container maxWidth="false">
         <Toolbar disableGutters>
           {/* <CodeIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}

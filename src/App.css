@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Glegoo:wght@400;700&family=Kanit&display=swap");
 
 .App {
-  text-align: center;
+  /* text-align: center; */
   /* background-color: #000000;
   background-image: url("https://www.transparenttextures.com/patterns/dark-mosaic.png");
   margin: 0;
@@ -26,22 +26,52 @@
   bottom: 0px;
   left: 0px;
   overflow: auto;
-  align-items: center;
-  display: flex;
+  /* align-items: center; */
+  /* display: flex; */
   /* justify-content: center; */
-  flex-direction: column;
+  /* flex-direction: column; */
+  display: grid;
+  grid-template-rows: minmax(auto, 70px) auto auto auto auto auto;
+  grid-template-columns: auto;
 }
 
 .head {
   text-align: left;
   color: #ff4c29;
   font-family: "Ubuntu Mono", monospace;
-  font-size: 8vw;
+  font-size: 8vh;
   margin: 0;
 }
 
 .head span {
-  color: #334756;
-  font-size: 3vw;
+  color: white;
+  font-size: 3vh;
   font-family: "Glegoo", serif;
+}
+
+.about-header {
+  font-family: "Glegoo", serif;
+  color: #334756;
+  font-size: 2vh;
+  text-align: left;
+  margin: 0;
+  margin-right: 10px;
+}
+
+.portfolio-header {
+  font-family: "Glegoo", serif;
+  color: #334756;
+  font-size: 2vh;
+  text-align: left;
+  margin: 0;
+  margin-right: 10px;
+}
+
+.contact-header {
+  font-family: "Glegoo", serif;
+  color: #334756;
+  font-size: 2vh;
+  text-align: left;
+  margin: 0;
+  margin-right: 10px;
 }
