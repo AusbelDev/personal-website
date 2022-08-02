@@ -39,7 +39,7 @@ const ResponsiveAppBar = () => {
 
   return (
     <AppBar position="static" sx={{ justifyContent: "center" }}>
-      <Container maxWidth="false">
+      <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* <CodeIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
           <Typography
@@ -101,7 +101,7 @@ const ResponsiveAppBar = () => {
             variant="h5"
             noWrap
             component="a"
-            href=""
+            href="/"
             sx={{
               mr: 2,
               display: { xs: "flex", md: "none" },

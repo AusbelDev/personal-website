@@ -43,7 +43,7 @@
   margin: 0;
 }
 
-.head span {
+.head-span {
   color: white;
   font-size: 3vh;
   font-family: "Glegoo", serif;
@@ -74,4 +74,29 @@
   text-align: left;
   margin: 0;
   margin-right: 10px;
+}
+
+.about-grid {
+  color: white;
+  font-family: "Kanit";
+  display: grid;
+  grid-template-areas:
+    "text1  img"
+    "text3  img"
+    "text2  img"
+    "text4  img";
+}
+
+@media only screen and (max-width: 700px) {
+  .about-grid {
+    color: white;
+    font-family: "Kanit";
+    display: grid;
+    grid-template-areas:
+      "text1"
+      "text3"
+      "text2"
+      "text4"
+      "img";
+  }
 }
