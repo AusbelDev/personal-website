@@ -7,6 +7,21 @@ import { AnimatePresence } from "framer-motion";
 import img from "./20201201_133703.jpg";
 import Glitch from "./Glitch";
 
+import {
+  SiJavascript,
+  SiExpress,
+  SiReact,
+  SiHtml5,
+  SiCss3,
+  SiVisualstudiocode,
+  SiLinux,
+  SiGit,
+  SiMongodb,
+  SiRos,
+  SiTensorflow,
+} from "react-icons/si";
+import { FaNode } from "react-icons/fa";
+
 const animationConfiguration = {
   initial: { opacity: 0 },
   animate: { opacity: 1 },
@@ -65,8 +80,8 @@ function TextList() {
         animate="center"
         exit="exit"
         transition={{
-          y: { type: "spring", stiffness: 300, damping: 200 },
           opacity: { duration: 0.5 },
+          y: { type: "spring", stiffness: 300, damping: 200 },
         }}
       >
         {textList[index]}
@@ -126,8 +141,8 @@ function Home() {
             <div
               key={index}
               style={{
-                width: "90%",
-                margin: "1%",
+                width: "100%",
+                margin: "0%",
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
@@ -160,6 +175,90 @@ function Home() {
               }}
             />
           </div>
+
+          <div
+            className="certifications-sec"
+            style={{
+              gridArea: "certifications",
+              display: "grid",
+              gridTemplateAreas: `"title title title"
+                                  "img1 img2 img3"`,
+            }}
+          >
+            <div style={{ gridArea: "title" }}>
+              <h3>Certifications</h3>
+            </div>
+            <div style={{ gridArea: "img1" }}>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://coursera.org/share/f2defc96f73643c516ba518abb244732"
+              >
+                <img
+                  style={{
+                    height: "auto",
+                    maxWidth: "50%",
+                  }}
+                  src="https://images.credly.com/size/680x680/images/efbdc0d6-b46e-4e3c-8cf8-2314d8a5b971/GCC_badge_python_1000x1000.png"
+                  alt="IT Certificate"
+                />
+              </a>
+            </div>
+            <div style={{ gridArea: "img2" }}>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://coursera.org/share/238d41db684bf0e75cd13ce3b0793764"
+              >
+                <img
+                  style={{
+                    height: "auto",
+                    maxWidth: "51%",
+                  }}
+                  src="https://www.cursosgis.com/wp-content/uploads/0-11.png"
+                  alt="Python Certification"
+                />
+              </a>
+            </div>
+            <div style={{ gridArea: "img3" }}>
+              <a
+                target="_blank"
+                rel="noopener noreferrer"
+                href="https://coursera.org/share/68727b579b022ffac8be7248490a20b4"
+              >
+                <img
+                  style={{
+                    height: "auto",
+                    maxWidth: "100%",
+                  }}
+                  src="https://gisgeography.com/wp-content/uploads/2022/01/DeepLearningAI-300x300.png"
+                  alt="DL Certification"
+                />
+              </a>
+            </div>
+          </div>
+          <Container
+            maxWidth="false"
+            style={{ gridArea: "skills", fontSize: "5vh", textAlign: "center" }}
+          >
+            <div>
+              <h3>Skills</h3>
+            </div>
+            <div>
+              <SiJavascript style={{ marginRight: "1vw" }} />
+              <FaNode style={{ marginRight: "1vw" }} />
+              <SiExpress style={{ marginRight: "1vw" }} />
+              <SiReact style={{ marginRight: "1vw" }} />
+              <SiHtml5 style={{ marginRight: "1vw" }} />
+              <SiCss3 style={{ marginRight: "1vw" }} />
+              <SiVisualstudiocode style={{ marginRight: "1vw" }} />
+              <SiLinux style={{ marginRight: "1vw" }} />
+              <SiGit style={{ marginRight: "1vw" }} />
+              <SiMongodb style={{ marginRight: "1vw" }} />
+              <SiRos style={{ marginRight: "1vw" }} />
+              <SiTensorflow />
+            </div>
+          </Container>
         </div>
       </Container>
 

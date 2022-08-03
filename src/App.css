@@ -52,7 +52,7 @@
 .about-header {
   font-family: "Glegoo", serif;
   color: #334756;
-  font-size: 2vh;
+  font-size: 2.5vh;
   text-align: left;
   margin: 0;
   margin-right: 10px;
@@ -78,25 +78,47 @@
 
 .about-grid {
   color: white;
-  font-family: "Kanit";
+  font-family: "Kanit", sans-serif;
+  font-size: 2vh;
   display: grid;
   grid-template-areas:
     "text1  img"
     "text3  img"
     "text2  img"
-    "text4  img";
+    "text4  img"
+    "certifications  certifications"
+    "skills  skills";
 }
+
+/* .certifications {
+  grid-area: "certifications";
+  display: "grid";
+  grid-template-areas:
+    "title title title"
+    "img1 img2 img3";
+} */
 
 @media only screen and (max-width: 700px) {
   .about-grid {
     color: white;
-    font-family: "Kanit";
+    font-family: "Kanit", sans-serif;
     display: grid;
     grid-template-areas:
       "text1"
       "text3"
       "text2"
       "text4"
-      "img";
+      "img"
+      "certifications"
+      "skills";
+  }
+  .certifications-sec {
+    grid-area: "certifications";
+    display: grid;
+    grid-template-areas:
+      "title"
+      "img1"
+      "img2"
+      "img3";
   }
 }
