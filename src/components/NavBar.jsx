@@ -14,7 +14,7 @@ import MenuItem from "@mui/material/MenuItem";
 // import CodeIcon from "@mui/icons-material/Code";
 // import { NearMeDisabledTwoTone } from "@mui/icons-material";
 
-const pages = ["About Me", "Portfolio", "Contact Me"];
+const pages = ["About Me", "Projects", "Contact Me"];
 const settings = ["Profile", "Account", "Dashboard", "Logout"];
 const name = "<Λ>";
 

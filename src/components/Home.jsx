@@ -186,15 +186,38 @@ function Home() {
             style={{
               gridArea: "certifications",
               textAlign: "center",
+              marginBottom: "2vh",
             }}
           >
-            <div>
-              <h3>Certifications</h3>
+            <div
+              style={{
+                textAlign: "left",
+                color: "#334756",
+                display: "flex",
+                // justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <h3
+                style={{
+                  fontFamily: "Glegoo, serif",
+                }}
+              >
+                Certifications
+              </h3>
+              <div
+                style={{
+                  marginLeft: "1%",
+                  width: "100%",
+                  border: "none",
+                  borderTop: "1px solid #334756",
+                }}
+              ></div>
             </div>
             <div
               style={{
                 display: "flex",
-                justifyContent: "center",
+                justifyContent: "space-evenly",
                 alignContent: "center",
               }}
             >
@@ -219,7 +242,7 @@ function Home() {
             <div
               style={{
                 display: "flex",
-                justifyContent: "center",
+                justifyContent: "space-evenly",
                 alignContent: "center",
               }}
             >
@@ -244,7 +267,7 @@ function Home() {
             <div
               style={{
                 display: "flex",
-                justifyContent: "center",
+                justifyContent: "space-evenly",
                 alignContent: "center",
               }}
             >
@@ -274,11 +297,37 @@ function Home() {
               gridArea: "skills",
               fontSize: "5vh",
               textAlign: "center",
-              marginBottom: "5vh",
+              marginBottom: "7vh",
             }}
           >
-            <div>
-              <h3>Skills</h3>
+            <div
+              style={{
+                textAlign: "left",
+                color: "#334756",
+                display: "flex",
+                // justifyContent: "center",
+                alignItems: "center",
+                marginBottom: "5vh",
+              }}
+            >
+              <h3
+                style={{
+                  fontFamily: "Glegoo, serif",
+                  fontSize: "2.5vh",
+                  marginLeft: "10%",
+                }}
+              >
+                Skills
+              </h3>
+              <div
+                style={{
+                  marginLeft: "1%",
+                  width: "100%",
+                  border: "none",
+                  borderTop: "1px solid #334756",
+                  marginRight: "10%",
+                }}
+              ></div>
             </div>
             <div
               style={{
@@ -321,7 +370,14 @@ function Home() {
         maxWidth="xl"
         sx={{ display: "flex", alignItems: "center", flexDirection: "column" }}
       >
-        <div style={{ display: "flex", alignItems: "center", width: "100%" }}>
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            width: "100%",
+            marginBottom: "3vh",
+          }}
+        >
           <h1 className="contact-header">CONTACT</h1>
           <span
             style={{

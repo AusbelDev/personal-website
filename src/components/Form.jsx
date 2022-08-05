@@ -4,8 +4,8 @@ import React, { useState } from "react";
 function Form() {
   const [contact, setContact] = useState({
     fName: "",
-    lName: "",
     email: "",
+    message: "",
   });
 
   function handleChange(event) {
@@ -31,17 +31,7 @@ function Form() {
             value={contact.fName}
             placeholder=" "
           />
-          <label htmlFor="fName">First Name</label>
-        </div>
-        <div className="user-box">
-          <input
-            type="text"
-            name="lName"
-            onChange={handleChange}
-            value={contact.lName}
-            placeholder=" "
-          />
-          <label htmlFor="lName">Last Name</label>
+          <label htmlFor="fName">What's Your Name?</label>
         </div>
         <div className="user-box">
           <input
@@ -51,7 +41,17 @@ function Form() {
             value={contact.email}
             placeholder=" "
           />
-          <label htmlFor="email">Email</label>
+          <label htmlFor="lName">Where can i reach you?</label>
+        </div>
+        <div className="user-box">
+          <input
+            type="text"
+            name="message"
+            onChange={handleChange}
+            value={contact.message}
+            placeholder=" "
+          />
+          <label htmlFor="email">What's your message?</label>
         </div>
         <a href="http://youtube.com">
           <span></span>
