@@ -6,6 +6,7 @@ import Container from "@mui/material/Container";
 import { AnimatePresence } from "framer-motion";
 import img from "./20201201_133703.jpg";
 import Glitch from "./Glitch";
+import Form from "./Form";
 
 import {
   SiJavascript,
@@ -19,6 +20,10 @@ import {
   SiMongodb,
   SiRos,
   SiTensorflow,
+  SiLinkedin,
+  SiInstagram,
+  SiTwitter,
+  SiGithub,
 } from "react-icons/si";
 import { FaNode } from "react-icons/fa";
 
@@ -176,19 +181,23 @@ function Home() {
             />
           </div>
 
-          <div
+          <Container
             className="certifications-sec"
             style={{
               gridArea: "certifications",
-              display: "grid",
-              gridTemplateAreas: `"title title title"
-                                  "img1 img2 img3"`,
+              textAlign: "center",
             }}
           >
-            <div style={{ gridArea: "title" }}>
+            <div>
               <h3>Certifications</h3>
             </div>
-            <div style={{ gridArea: "img1" }}>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignContent: "center",
+              }}
+            >
               <a
                 target="_blank"
                 rel="noopener noreferrer"
@@ -197,14 +206,26 @@ function Home() {
                 <img
                   style={{
                     height: "auto",
-                    maxWidth: "50%",
+                    maxWidth: "25vh",
                   }}
                   src="https://images.credly.com/size/680x680/images/efbdc0d6-b46e-4e3c-8cf8-2314d8a5b971/GCC_badge_python_1000x1000.png"
                   alt="IT Certificate"
                 />
               </a>
+              <div style={{ display: "flex", alignItems: "center" }}>
+                <p>Google IT Automation Professional Certificate</p>
+              </div>
             </div>
-            <div style={{ gridArea: "img2" }}>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignContent: "center",
+              }}
+            >
+              <div style={{ display: "flex", alignItems: "center" }}>
+                <p>Python for Everybody Specialization</p>
+              </div>
               <a
                 target="_blank"
                 rel="noopener noreferrer"
@@ -213,14 +234,20 @@ function Home() {
                 <img
                   style={{
                     height: "auto",
-                    maxWidth: "51%",
+                    maxWidth: "23vh",
                   }}
                   src="https://www.cursosgis.com/wp-content/uploads/0-11.png"
                   alt="Python Certification"
                 />
               </a>
             </div>
-            <div style={{ gridArea: "img3" }}>
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "center",
+                alignContent: "center",
+              }}
+            >
               <a
                 target="_blank"
                 rel="noopener noreferrer"
@@ -229,34 +256,50 @@ function Home() {
                 <img
                   style={{
                     height: "auto",
-                    maxWidth: "100%",
+                    maxWidth: "25vh",
                   }}
                   src="https://gisgeography.com/wp-content/uploads/2022/01/DeepLearningAI-300x300.png"
                   alt="DL Certification"
                 />
               </a>
+              <div style={{ display: "flex", alignItems: "center" }}>
+                <p>Deep Learning Specialization</p>
+              </div>
             </div>
-          </div>
+          </Container>
+
           <Container
             maxWidth="false"
-            style={{ gridArea: "skills", fontSize: "5vh", textAlign: "center" }}
+            style={{
+              gridArea: "skills",
+              fontSize: "5vh",
+              textAlign: "center",
+              marginBottom: "5vh",
+            }}
           >
             <div>
               <h3>Skills</h3>
             </div>
-            <div>
-              <SiJavascript style={{ marginRight: "1vw" }} />
-              <FaNode style={{ marginRight: "1vw" }} />
-              <SiExpress style={{ marginRight: "1vw" }} />
-              <SiReact style={{ marginRight: "1vw" }} />
-              <SiHtml5 style={{ marginRight: "1vw" }} />
-              <SiCss3 style={{ marginRight: "1vw" }} />
-              <SiVisualstudiocode style={{ marginRight: "1vw" }} />
-              <SiLinux style={{ marginRight: "1vw" }} />
-              <SiGit style={{ marginRight: "1vw" }} />
-              <SiMongodb style={{ marginRight: "1vw" }} />
-              <SiRos style={{ marginRight: "1vw" }} />
-              <SiTensorflow />
+            <div
+              style={{
+                display: "flex",
+                justifyContent: "space-evenly",
+                flexWrap: "wrap",
+                gap: "1vh",
+              }}
+            >
+              <SiJavascript title="JavaScript" />
+              <FaNode title="Node.js" />
+              <SiExpress title="express.js" />
+              <SiReact title="React.js" />
+              <SiHtml5 title="HTML" />
+              <SiCss3 title="CSS" />
+              <SiVisualstudiocode title="VSCode" />
+              <SiLinux title="Linux" />
+              <SiGit title="Git" />
+              <SiMongodb title="MongoDB" />
+              <SiRos title="ROS" />
+              <SiTensorflow title="TensorFlow" />
             </div>
           </Container>
         </div>
@@ -274,7 +317,10 @@ function Home() {
           ></div>
         </div>
       </Container>
-      <Container maxWidth="xl" sx={{ display: "flex", alignItems: "center" }}>
+      <Container
+        maxWidth="xl"
+        sx={{ display: "flex", alignItems: "center", flexDirection: "column" }}
+      >
         <div style={{ display: "flex", alignItems: "center", width: "100%" }}>
           <h1 className="contact-header">CONTACT</h1>
           <span
@@ -284,6 +330,79 @@ function Home() {
               backgroundColor: "#334756",
             }}
           ></span>
+        </div>
+
+        <div
+          style={{
+            display: "flex",
+            width: "100%",
+            justifyContent: "center",
+            flexDirection: "column",
+            alignItems: "center",
+          }}
+        >
+          <Form />
+          <div
+            style={{
+              fontSize: "5vh",
+              textAlign: "center",
+              color: "white",
+              display: "inherit",
+              flexDirection: "row",
+              width: "70%",
+              justifyContent: "space-evenly",
+              marginTop: "7vh",
+            }}
+          >
+            <a
+              href="https://www.linkedin.com/in/marcos-rrh/"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                color: "white",
+              }}
+            >
+              <span>
+                <SiLinkedin title="LinkedIn" />
+              </span>
+            </a>
+            <a
+              href="https://github.com/AusbelDev"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                color: "white",
+              }}
+            >
+              <span>
+                <SiGithub title="GitHub" />
+              </span>
+            </a>
+            <a
+              href="https://instagram.com/ausbeldev"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                color: "white",
+              }}
+            >
+              <span>
+                <SiInstagram title="Instagram" />
+              </span>
+            </a>
+            <a
+              href="https://twitter.com/AusbelDev"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{
+                color: "white",
+              }}
+            >
+              <span>
+                <SiTwitter title="Twitter" />
+              </span>
+            </a>
+          </div>
         </div>
       </Container>
 
@@ -297,6 +416,8 @@ function Home() {
             fontFamily: "Kanit, sans-serif",
             color: "#2C394B",
             textAlign: "center",
+            marginTop: "3vh",
+            marginBottom: "5vh",
           }}
         >
           ©Ausbel 2022
