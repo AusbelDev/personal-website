@@ -7,6 +7,7 @@ import { AnimatePresence } from "framer-motion";
 import img from "./20201201_133703.jpg";
 import Glitch from "./Glitch";
 import Form from "./Form";
+import Fade from "react-reveal/Fade";
 
 import {
   SiJavascript,
@@ -24,6 +25,8 @@ import {
   SiInstagram,
   SiTwitter,
   SiGithub,
+  SiNumpy,
+  SiDocker,
 } from "react-icons/si";
 import { FaNode } from "react-icons/fa";
 
@@ -55,8 +58,8 @@ const textAnimationConfig = {
 
 const textList = ["Full-Stack Dev", "ML Engineer", "Physics Engineer"];
 const aboutText = [
-  "My name is Oliver Cederborg. I am 25 years old, I live in Copenhagen, Denmark, and I'm a self-taught designer and developer.",
-  "Digital design has been my main focus for many years, specifically UI/UX, but I have the past years shifted my focus to frontend development, which I have developed a great passion for.",
+  "My name is Marcos 'Ausbel' Hernandez. I am 28 years old and i live in Guanajuato, Mexico. I'm a self-taught developer and machine learning engineer.",
+  "Technology is  has been my main focus for many years, specifically UI/UX, but I have the past years shifted my focus to frontend development, which I have developed a great passion for.",
   "I enjoy the constant change in the technologies used in the area and love diving into new frameworks and technologies.",
   "  Spending time customizing, improving and tinkering with my work environment and tools is something I enjoy a lot, as it is something I use for many hours daily. It allows me to have it exactly as I desire. For instance, I use Neovim as my editor of choice, I have built multiple custom mechanical keyboards, and I use Colemak DHk as my keyboard layout. ",
 ];
@@ -143,43 +146,46 @@ function Home() {
         </div>
         <div className="about-grid">
           {aboutText.map((text, index) => (
-            <div
-              key={index}
-              style={{
-                width: "100%",
-                margin: "0%",
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-                justifyContent: "center",
+            <Fade left cascade duration={2000}>
+              <div
+                key={index}
+                style={{
+                  width: "100%",
+                  margin: "0%",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "center",
+                  justifyContent: "center",
 
-                gridArea: `text${index + 1}`,
+                  gridArea: `text${index + 1}`,
+                }}
+              >
+                <p>{text}</p>
+              </div>
+            </Fade>
+          ))}
+          <Fade right duration={2000}>
+            <div
+              style={{
+                gridArea: `img`,
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
               }}
             >
-              <p>{text}</p>
+              <img
+                src={img}
+                alt="img"
+                style={{
+                  height: "auto",
+                  width: "auto",
+                  maxWidth: "90%",
+                  maxHeight: "90%",
+                  borderRadius: "20%",
+                }}
+              />
             </div>
-          ))}
-
-          <div
-            style={{
-              gridArea: `img`,
-              display: "flex",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <img
-              src={img}
-              alt="img"
-              style={{
-                height: "auto",
-                width: "auto",
-                maxWidth: "90%",
-                maxHeight: "90%",
-                borderRadius: "20%",
-              }}
-            />
-          </div>
+          </Fade>
 
           <Container
             className="certifications-sec"
@@ -214,81 +220,87 @@ function Home() {
                 }}
               ></div>
             </div>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-evenly",
-                alignContent: "center",
-              }}
-            >
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://coursera.org/share/f2defc96f73643c516ba518abb244732"
+            <Fade right duration={3000}>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-evenly",
+                  alignContent: "center",
+                }}
               >
-                <img
-                  style={{
-                    height: "auto",
-                    maxWidth: "25vh",
-                  }}
-                  src="https://images.credly.com/size/680x680/images/efbdc0d6-b46e-4e3c-8cf8-2314d8a5b971/GCC_badge_python_1000x1000.png"
-                  alt="IT Certificate"
-                />
-              </a>
-              <div style={{ display: "flex", alignItems: "center" }}>
-                <p>Google IT Automation Professional Certificate</p>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://coursera.org/share/f2defc96f73643c516ba518abb244732"
+                >
+                  <img
+                    style={{
+                      height: "auto",
+                      maxWidth: "25vh",
+                    }}
+                    src="https://images.credly.com/size/680x680/images/efbdc0d6-b46e-4e3c-8cf8-2314d8a5b971/GCC_badge_python_1000x1000.png"
+                    alt="IT Certificate"
+                  />
+                </a>
+                <div style={{ display: "flex", alignItems: "center" }}>
+                  <p>Google IT Automation Professional Certificate</p>
+                </div>
               </div>
-            </div>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-evenly",
-                alignContent: "center",
-              }}
-            >
-              <div style={{ display: "flex", alignItems: "center" }}>
-                <p>Python for Everybody Specialization</p>
-              </div>
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://coursera.org/share/238d41db684bf0e75cd13ce3b0793764"
+            </Fade>
+            <Fade left duration={3000}>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-evenly",
+                  alignContent: "center",
+                }}
               >
-                <img
-                  style={{
-                    height: "auto",
-                    maxWidth: "23vh",
-                  }}
-                  src="https://www.cursosgis.com/wp-content/uploads/0-11.png"
-                  alt="Python Certification"
-                />
-              </a>
-            </div>
-            <div
-              style={{
-                display: "flex",
-                justifyContent: "space-evenly",
-                alignContent: "center",
-              }}
-            >
-              <a
-                target="_blank"
-                rel="noopener noreferrer"
-                href="https://coursera.org/share/68727b579b022ffac8be7248490a20b4"
-              >
-                <img
-                  style={{
-                    height: "auto",
-                    maxWidth: "25vh",
-                  }}
-                  src="https://gisgeography.com/wp-content/uploads/2022/01/DeepLearningAI-300x300.png"
-                  alt="DL Certification"
-                />
-              </a>
-              <div style={{ display: "flex", alignItems: "center" }}>
-                <p>Deep Learning Specialization</p>
+                <div style={{ display: "flex", alignItems: "center" }}>
+                  <p>Python for Everybody Specialization</p>
+                </div>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://coursera.org/share/238d41db684bf0e75cd13ce3b0793764"
+                >
+                  <img
+                    style={{
+                      height: "auto",
+                      maxWidth: "23vh",
+                    }}
+                    src="https://www.cursosgis.com/wp-content/uploads/0-11.png"
+                    alt="Python Certification"
+                  />
+                </a>
               </div>
-            </div>
+            </Fade>
+            <Fade right duration={3000}>
+              <div
+                style={{
+                  display: "flex",
+                  justifyContent: "space-evenly",
+                  alignContent: "center",
+                }}
+              >
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href="https://coursera.org/share/68727b579b022ffac8be7248490a20b4"
+                >
+                  <img
+                    style={{
+                      height: "auto",
+                      maxWidth: "25vh",
+                    }}
+                    src="https://gisgeography.com/wp-content/uploads/2022/01/DeepLearningAI-300x300.png"
+                    alt="DL Certification"
+                  />
+                </a>
+                <div style={{ display: "flex", alignItems: "center" }}>
+                  <p>Deep Learning Specialization</p>
+                </div>
+              </div>
+            </Fade>
           </Container>
 
           <Container
@@ -337,18 +349,24 @@ function Home() {
                 gap: "1vh",
               }}
             >
-              <SiJavascript title="JavaScript" />
-              <FaNode title="Node.js" />
-              <SiExpress title="express.js" />
-              <SiReact title="React.js" />
-              <SiHtml5 title="HTML" />
-              <SiCss3 title="CSS" />
-              <SiVisualstudiocode title="VSCode" />
-              <SiLinux title="Linux" />
-              <SiGit title="Git" />
-              <SiMongodb title="MongoDB" />
-              <SiRos title="ROS" />
-              <SiTensorflow title="TensorFlow" />
+              <Fade left cascade duration={3000}>
+                <SiJavascript title="JavaScript" />
+                <FaNode title="Node.js" />
+                <SiExpress title="express.js" />
+                <SiReact title="React.js" />
+                <SiHtml5 title="HTML" />
+                <SiCss3 title="CSS" />
+                <SiDocker title="Docker" />
+              </Fade>
+              <Fade right cascade duration={3000}>
+                <SiVisualstudiocode title="VSCode" />
+                <SiLinux title="Linux" />
+                <SiGit title="Git" />
+                <SiMongodb title="MongoDB" />
+                <SiRos title="ROS" />
+                <SiTensorflow title="TensorFlow" />
+                <SiNumpy title="Numpy" />
+              </Fade>
             </div>
           </Container>
         </div>
@@ -397,12 +415,35 @@ function Home() {
             alignItems: "center",
           }}
         >
-          <Form />
+          <div
+            style={{
+              display: "flex",
+              // flexWrap: "wrap",
+              justifyContent: "center",
+              alignItems: "center",
+              flexDirection: "column",
+            }}
+          >
+            <div>
+              <p
+                style={{
+                  fontSize: "2vh",
+                  fontFamily: "Kanit, sans-serif",
+                  color: "#ede6e6",
+                  width: "100%",
+                }}
+              >
+                Do not hesitate to contact me through the form here, my social
+                networks or by direct email on mr.rochahernandez@gmail.com.
+              </p>
+            </div>
+            <Form />
+          </div>
           <div
             style={{
               fontSize: "5vh",
               textAlign: "center",
-              color: "white",
+              color: "#d4cdcd",
               display: "inherit",
               flexDirection: "row",
               width: "70%",
@@ -415,7 +456,7 @@ function Home() {
               target="_blank"
               rel="noopener noreferrer"
               style={{
-                color: "white",
+                color: "#d4cdcd",
               }}
             >
               <span>
@@ -427,7 +468,7 @@ function Home() {
               target="_blank"
               rel="noopener noreferrer"
               style={{
-                color: "white",
+                color: "#d4cdcd",
               }}
             >
               <span>
@@ -439,7 +480,7 @@ function Home() {
               target="_blank"
               rel="noopener noreferrer"
               style={{
-                color: "white",
+                color: "#d4cdcd",
               }}
             >
               <span>
@@ -451,7 +492,7 @@ function Home() {
               target="_blank"
               rel="noopener noreferrer"
               style={{
-                color: "white",
+                color: "#d4cdcd",
               }}
             >
               <span>

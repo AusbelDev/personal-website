@@ -77,7 +77,7 @@
 }
 
 .about-grid {
-  color: white;
+  color: #d4cdcd;
   font-family: "Kanit", sans-serif;
   font-size: 2vh;
   display: grid;
@@ -90,17 +90,9 @@
     "skills  skills";
 }
 
-/* .certifications {
-  grid-area: "certifications";
-  display: "grid";
-  grid-template-areas:
-    "title title title"
-    "img1 img2 img3";
-} */
-
 @media only screen and (max-width: 1000px) {
   .about-grid {
-    color: white;
+    color: #d4cdcd;
     font-family: "Kanit", sans-serif;
     display: grid;
     grid-template-areas:
