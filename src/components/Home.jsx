@@ -8,6 +8,8 @@ import img from "./20201201_133703.jpg";
 import Glitch from "./Glitch";
 import Form from "./Form";
 import Fade from "react-reveal/Fade";
+import Card from "./Card";
+import { Carousel } from "3d-react-carousal";
 
 import {
   SiJavascript,
@@ -59,9 +61,51 @@ const textAnimationConfig = {
 const textList = ["Full-Stack Dev", "ML Engineer", "Physics Engineer"];
 const aboutText = [
   "My name is Marcos 'Ausbel' Hernandez. I am 28 years old and i live in Guanajuato, Mexico. I'm a self-taught developer and machine learning engineer.",
-  "Technology is  has been my main focus for many years, specifically UI/UX, but I have the past years shifted my focus to frontend development, which I have developed a great passion for.",
+  "Technology is my passion, and software development has been my main focus for many years, specifically applied machine learning, but i have shifted my focus to a full-stack development, for which i have generated a great passion for.",
   "I enjoy the constant change in the technologies used in the area and love diving into new frameworks and technologies.",
   "  Spending time customizing, improving and tinkering with my work environment and tools is something I enjoy a lot, as it is something I use for many hours daily. It allows me to have it exactly as I desire. For instance, I use Neovim as my editor of choice, I have built multiple custom mechanical keyboards, and I use Colemak DHk as my keyboard layout. ",
+];
+
+const projects = [
+  {
+    title: "Real Time Traffic Signs Detection",
+    description:
+      "A real time traffic signs detection system using deep learning.",
+    image:
+      "https://www.grufoos.com/IMG/iconos/senal-transito-reglamentarias.jpg",
+    status: "In Progress",
+  },
+  {
+    title: "Neural Network from Scratch using Numpy",
+    description: "A neural network from scratch using Numpy.",
+    image:
+      "https://www.simplilearn.com/ice9/free_resources_article_thumb/RNN_Tutorial.jpg",
+    status: "Finished",
+  },
+  {
+    title: "Smoke Detection on Laparoscopic Surgery using Deep Learning",
+    description: "A smoke detection system using deep learning.",
+    image:
+      "https://www.boehringerlabs.com/wp-content/uploads/2021/01/GSNOR0817_006a_89676_600.jpg",
+    status: "Finished",
+  },
+  {
+    title:
+      "Real-Time Embedded RGB-D SLAM using CNN's for depth estimation and feature extraction",
+    description:
+      "A real-time embedded RGB-D SLAM system using CNN's for depth estimation and feature extraction.",
+    image:
+      "https://www.researchgate.net/profile/Sven-Behnke-2/publication/327093298/figure/fig15/AS:667215703592961@1536088028889/Sparse-feature-based-3D-Reconstruction-of-KITTI-00-by-ORB-SLAM-The-top-view-shows-an.ppm",
+    status: "Finished",
+  },
+  {
+    title:
+      "Deep Learningn implementation on an autonomous vehicle for strawberry production estimation",
+    description:
+      "A deep learning implementation on an autonomous vehicle for strawberry production estimation.",
+    image: "/rover.jpg",
+    status: "Finished",
+  },
 ];
 
 function TextList() {
@@ -146,7 +190,7 @@ function Home() {
         </div>
         <div className="about-grid">
           {aboutText.map((text, index) => (
-            <Fade left cascade duration={2000}>
+            <Fade left cascade duration={2000} key={index}>
               <div
                 key={index}
                 style={{
@@ -372,8 +416,18 @@ function Home() {
         </div>
       </Container>
 
-      <Container maxWidth="xl" sx={{ display: "flex", alignItems: "center" }}>
-        <div style={{ display: "flex", alignItems: "center", width: "100%" }}>
+      <Container
+        maxWidth="xl"
+        sx={{ display: "flex", alignItems: "center", flexDirection: "column" }}
+      >
+        <div
+          style={{
+            display: "flex",
+            alignItems: "center",
+            width: "100%",
+            marginBottom: "3vh",
+          }}
+        >
           <h1 className="portfolio-header">PROJECTS</h1>
           <div
             style={{
@@ -382,6 +436,22 @@ function Home() {
               backgroundColor: "#334756",
             }}
           ></div>
+        </div>
+        <div
+          style={{
+            display: "flex",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            // alignItems: "center",
+            gap: "1vh",
+            marginBottom: "3vh",
+          }}
+        >
+          {projects.map((project, index) => (
+            <Fade bottom duration={3000} key={index}>
+              <Card project={project} key={index} />
+            </Fade>
+          ))}
         </div>
       </Container>
       <Container
