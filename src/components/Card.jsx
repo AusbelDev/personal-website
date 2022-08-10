@@ -8,7 +8,12 @@ import { Button, CardActions } from "@mui/material";
 export default function MultiActionAreaCard(props) {
   return (
     <Card
-      sx={{ maxWidth: 345, height: "100%", backgroundColor: "transparent" }}
+      sx={{
+        maxWidth: 345,
+        height: "100%",
+        backgroundColor: "transparent",
+        boxShadow: "0 25px 25px rgba(0, 0, 0, 0.6)",
+      }}
     >
       <CardMedia
         component="img"

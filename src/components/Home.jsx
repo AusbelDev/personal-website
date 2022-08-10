@@ -9,8 +9,6 @@ import Glitch from "./Glitch";
 import Form from "./Form";
 import Fade from "react-reveal/Fade";
 import Card from "./Card";
-import { Carousel } from "3d-react-carousal";
-
 import {
   SiJavascript,
   SiExpress,
@@ -37,6 +35,8 @@ const animationConfiguration = {
   animate: { opacity: 1 },
   exit: { opacity: 0 },
 };
+
+// service_n18gngk
 
 const textAnimationConfig = {
   enter: (direction) => {
@@ -226,6 +226,7 @@ function Home() {
                   maxWidth: "90%",
                   maxHeight: "90%",
                   borderRadius: "20%",
+                  boxShadow: "0 25px 25px rgba(0, 0, 0, 0.6)",
                 }}
               />
             </div>
