@@ -177,7 +177,11 @@ function Home() {
         <Glitch />
       </Container>
 
-      <Container maxWidth="xl" sx={{ display: "block", alignItems: "center" }}>
+      <Container
+        id="About Me"
+        maxWidth="xl"
+        sx={{ display: "block", alignItems: "center" }}
+      >
         <div style={{ display: "flex", alignItems: "center", width: "100%" }}>
           <h1 className="about-header">ABOUT</h1>
           <div
@@ -418,6 +422,7 @@ function Home() {
       </Container>
 
       <Container
+        id="Projects"
         maxWidth="xl"
         sx={{ display: "flex", alignItems: "center", flexDirection: "column" }}
       >
@@ -456,6 +461,7 @@ function Home() {
         </div>
       </Container>
       <Container
+        id="Contact Me"
         maxWidth="xl"
         sx={{ display: "flex", alignItems: "center", flexDirection: "column" }}
       >
