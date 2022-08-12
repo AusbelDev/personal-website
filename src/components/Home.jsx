@@ -60,10 +60,11 @@ const textAnimationConfig = {
 
 const textList = ["Full-Stack Dev", "ML Engineer", "Physics Engineer"];
 const aboutText = [
-  "My name is Marcos 'Ausbel' Hernandez. I am 28 years old and i live in Guanajuato, Mexico. I'm a self-taught developer and machine learning engineer.",
-  "Technology is my passion, and software development has been my main focus for many years, specifically applied machine learning, but i have shifted my focus to a full-stack development, for which i have generated a great passion for.",
+  "My name is Marcos 'Ausbel' Hernandez. I am 28 years old and i live in Guanajuato, Mexico. I'm a physics engineer and a self-taught developer and machine learning engineer.",
   "I enjoy the constant change in the technologies used in the area and love diving into new frameworks and technologies.",
-  "  Spending time customizing, improving and tinkering with my work environment and tools is something I enjoy a lot, as it is something I use for many hours daily. It allows me to have it exactly as I desire. For instance, I use Neovim as my editor of choice, I have built multiple custom mechanical keyboards, and I use Colemak DHk as my keyboard layout. ",
+  "Technology is my passion, and software development has been my main focus for many years, specifically applied machine learning, but i have shifted my focus to a full-stack development, for which i have generated a great passion for.",
+  "Spending time customizing, improving and tinkering with my work environment and tools is something I enjoy a lot, as it is something I use for many hours daily. It allows me to have everything exactly as I desire.  ",
+  "Below you can find some of the technologies I have been working with recently, as my certifications and skills.",
 ];
 
 const projects = [
@@ -208,7 +209,13 @@ function Home() {
                   gridArea: `text${index + 1}`,
                 }}
               >
-                <p>{text}</p>
+                <p
+                  style={{
+                    width: "100%",
+                  }}
+                >
+                  {text}
+                </p>
               </div>
             </Fade>
           ))}
@@ -510,8 +517,8 @@ function Home() {
                   width: "100%",
                 }}
               >
-                Do not hesitate to contact me through the form here, my social
-                networks or by direct email on mr.rochahernandez@gmail.com.
+                Do not hesitate to contact me through this form, my social
+                networks or by direct email on ausbel.dev@gmail.com.
               </p>
             </div>
             <Form />

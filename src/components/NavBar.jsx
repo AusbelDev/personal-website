@@ -11,12 +11,33 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
+import { SiLinkedin, SiInstagram, SiTwitter, SiGithub } from "react-icons/si";
+import useMediaQuery from "@mui/material/useMediaQuery";
 // import CodeIcon from "@mui/icons-material/Code";
 // import { NearMeDisabledTwoTone } from "@mui/icons-material";
 
 const pages = ["About Me", "Projects", "Contact Me"];
-const settings = ["Profile", "Account", "Dashboard", "Logout"];
+// const socials = ["Instagram", "Twitter", "LinkedIn", "GitHub"];
 const name = "<Λ>";
+
+const socials = [
+  {
+    name: "Instagram",
+    url: "https://www.instagram.com/l.a.k.a.l/",
+  },
+  {
+    name: "Twitter",
+    url: "https://twitter.com/l.a.k.a.l/",
+  },
+  {
+    name: "LinkedIn",
+    url: "https://www.linkedin.com/in/l.a.k.a.l/",
+  },
+  {
+    name: "GitHub",
+    url: "https://github.com/AusbelDev",
+  },
+];
 
 const ResponsiveAppBar = () => {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -38,7 +59,10 @@ const ResponsiveAppBar = () => {
   };
 
   return (
-    <AppBar position="static" sx={{ justifyContent: "center" }}>
+    <AppBar
+      position="static"
+      sx={{ justifyContent: "center", background: "transparent" }}
+    >
       <Container maxWidth="xl">
         <Toolbar disableGutters>
           {/* <CodeIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
@@ -135,38 +159,117 @@ const ResponsiveAppBar = () => {
             ))}
           </Box>
 
-          <Box sx={{ flexGrow: 0 }}>
-            <Tooltip title="Open settings">
-              <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                <Avatar
-                  alt="Remy Sharp"
-                  src="https://w1.pngwing.com/pngs/196/853/png-transparent-react-logo-javascript-stack-overflow-front-and-back-ends-github-freecodecamp-redux-computer-software.png"
-                />
-              </IconButton>
-            </Tooltip>
-            <Menu
-              sx={{ mt: "45px" }}
-              id="menu-appbar"
-              anchorEl={anchorElUser}
-              anchorOrigin={{
-                vertical: "top",
-                horizontal: "right",
+          {!useMediaQuery("(min-width:600px)") ? (
+            <Box
+              sx={{
+                flexGrow: 0,
               }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "right",
-              }}
-              open={Boolean(anchorElUser)}
-              onClose={handleCloseUserMenu}
             >
-              {settings.map((setting) => (
-                <MenuItem key={setting} onClick={handleCloseUserMenu}>
-                  <Typography textAlign="center">{setting}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
-          </Box>
+              <Tooltip title="Open settings">
+                <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
+                  <Avatar
+                    alt="Remy Sharp"
+                    src="https://w1.pngwing.com/pngs/196/853/png-transparent-react-logo-javascript-stack-overflow-front-and-back-ends-github-freecodecamp-redux-computer-software.png"
+                  />
+                </IconButton>
+              </Tooltip>
+              <Menu
+                sx={{ mt: "45px" }}
+                id="menu-appbar"
+                anchorEl={anchorElUser}
+                anchorOrigin={{
+                  vertical: "top",
+                  horizontal: "right",
+                }}
+                keepMounted
+                transformOrigin={{
+                  vertical: "top",
+                  horizontal: "right",
+                }}
+                open={Boolean(anchorElUser)}
+                onClose={handleCloseUserMenu}
+              >
+                {socials.map((social) => (
+                  <MenuItem key={social.name} onClick={handleCloseUserMenu}>
+                    <a
+                      href={social.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{
+                        color: "#d4cdcd",
+                        textDecoration: "none",
+                      }}
+                    >
+                      <Typography textAlign="center">{social.name}</Typography>
+                    </a>
+                  </MenuItem>
+                ))}
+              </Menu>
+            </Box>
+          ) : (
+            <Box
+              sx={{
+                flexGrow: 0,
+                fontSize: "3.5vh",
+                // justifyContent: "space-evenly",
+                alignItems: "center",
+                marginTop: "10px",
+              }}
+            >
+              <a
+                href="https://www.linkedin.com/in/marcos-rrh/"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  color: "#d4cdcd",
+                  marginRight: "20px",
+                }}
+              >
+                <span>
+                  <SiLinkedin title="LinkedIn" />
+                </span>
+              </a>
+              <a
+                href="https://github.com/AusbelDev"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  color: "#d4cdcd",
+                  marginRight: "20px",
+                }}
+              >
+                <span>
+                  <SiGithub title="GitHub" />
+                </span>
+              </a>
+              <a
+                href="https://instagram.com/ausbeldev"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  color: "#d4cdcd",
+                  marginRight: "20px",
+                }}
+              >
+                <span>
+                  <SiInstagram title="Instagram" />
+                </span>
+              </a>
+              <a
+                href="https://twitter.com/AusbelDev"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  color: "#d4cdcd",
+                }}
+              >
+                <span>
+                  <SiTwitter title="Twitter" />
+                </span>
+              </a>
+            </Box>
+          )}
+          {/* </Box> */}
         </Toolbar>
       </Container>
     </AppBar>
