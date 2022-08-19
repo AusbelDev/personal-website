@@ -64,7 +64,7 @@ const ResponsiveAppBar = () => {
       sx={{ justifyContent: "center", background: "transparent" }}
     >
       <Container maxWidth="xl">
-        <Toolbar disableGutters>
+        <Toolbar disableGutters id="back-to-top-anchor">
           {/* <CodeIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
           <Typography
             variant="h6"

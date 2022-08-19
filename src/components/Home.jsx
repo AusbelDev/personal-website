@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import "../App.css";
 import ResponsiveAppBar from "./NavBar";
 import { motion } from "framer-motion";
@@ -9,6 +9,8 @@ import Glitch from "./Glitch";
 import Form from "./Form";
 import Fade from "react-reveal/Fade";
 import Card from "./Card";
+import Fab from "@mui/material/Fab";
+import KeyboardArrowUpIcon from "@mui/icons-material/KeyboardArrowUp";
 import {
   SiJavascript,
   SiExpress,
@@ -29,6 +31,7 @@ import {
   SiDocker,
 } from "react-icons/si";
 import { FaNode } from "react-icons/fa";
+import ScrollTop from "./ScrollTop";
 
 const animationConfiguration = {
   initial: { opacity: 0 },
@@ -144,8 +147,22 @@ function TextList() {
 }
 
 function Home() {
+  const inputRef = useRef();
+  const [scrolled, setScrolled] = useState(false);
+  useEffect(() => {
+    console.log(inputRef.current);
+    inputRef.current.addEventListener("scroll", () => {
+      if (inputRef.current.scrollTop > 100) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    });
+  }, []);
+
   return (
     <motion.div
+      ref={inputRef}
       className="App"
       variants={animationConfiguration}
       initial="initial"
@@ -177,7 +194,6 @@ function Home() {
         </div>
         <Glitch />
       </Container>
-
       <Container
         id="About Me"
         maxWidth="xl"
@@ -427,7 +443,6 @@ function Home() {
           </Container>
         </div>
       </Container>
-
       <Container
         id="Projects"
         maxWidth="xl"
@@ -586,7 +601,6 @@ function Home() {
           </div>
         </div>
       </Container>
-
       <Container
         maxWidth="xl"
         sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
@@ -604,6 +618,11 @@ function Home() {
           ©Ausbel 2022
         </footer>
       </Container>
+      <ScrollTop scrolled={scrolled}>
+        <Fab size="small" aria-label="scroll back to top">
+          <KeyboardArrowUpIcon />
+        </Fab>
+      </ScrollTop>
     </motion.div>
   );
 }
