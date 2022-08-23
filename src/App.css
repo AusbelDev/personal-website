@@ -135,3 +135,26 @@
       "img3";
   }
 }
+
+.about-grid button {
+  color: #fff;
+  transition: 0.25s;
+}
+about-grid button:hover,
+about-grid button:focus {
+  border-color: var(--hover);
+  color: var(--color);
+  cursor: default;
+}
+
+.raise {
+  --color: #ff4c29;
+  --hover: #ff4c29;
+}
+
+.raise:hover,
+.raise:focus {
+  /* box-shadow: 0 15px 25px -0.1em var(--hover); */
+  color: var(--color);
+  transform: translateY(-0.15em);
+}

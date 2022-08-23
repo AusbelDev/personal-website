@@ -7,12 +7,12 @@ import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import MenuIcon from "@mui/icons-material/Menu";
 import Container from "@mui/material/Container";
-import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import { SiLinkedin, SiInstagram, SiTwitter, SiGithub } from "react-icons/si";
 import useMediaQuery from "@mui/material/useMediaQuery";
+import { TbSocial } from "react-icons/tb";
 // import CodeIcon from "@mui/icons-material/Code";
 // import { NearMeDisabledTwoTone } from "@mui/icons-material";
 
@@ -23,15 +23,15 @@ const name = "<Λ>";
 const socials = [
   {
     name: "Instagram",
-    url: "https://www.instagram.com/l.a.k.a.l/",
+    url: "https://www.instagram.com/ausbeldev/",
   },
   {
     name: "Twitter",
-    url: "https://twitter.com/l.a.k.a.l/",
+    url: "https://twitter.com/AusbelDev",
   },
   {
     name: "LinkedIn",
-    url: "https://www.linkedin.com/in/l.a.k.a.l/",
+    url: "https://www.linkedin.com/in/marcos-rrh/",
   },
   {
     name: "GitHub",
@@ -84,7 +84,12 @@ const ResponsiveAppBar = () => {
             {name}
           </Typography>
 
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
+          <Box
+            sx={{
+              flexGrow: 1,
+              display: { xs: "flex", md: "none" },
+            }}
+          >
             <IconButton
               size="large"
               aria-label="account of current user"
@@ -165,12 +170,16 @@ const ResponsiveAppBar = () => {
                 flexGrow: 0,
               }}
             >
-              <Tooltip title="Open settings">
-                <IconButton onClick={handleOpenUserMenu} sx={{ p: 0 }}>
-                  <Avatar
+              <Tooltip title="Open socials">
+                <IconButton
+                  onClick={handleOpenUserMenu}
+                  sx={{ p: 0, fontSize: "3vh" }}
+                >
+                  {/* <Avatar
                     alt="Remy Sharp"
                     src="https://w1.pngwing.com/pngs/196/853/png-transparent-react-logo-javascript-stack-overflow-front-and-back-ends-github-freecodecamp-redux-computer-software.png"
-                  />
+                  /> */}
+                  <TbSocial />
                 </IconButton>
               </Tooltip>
               <Menu

@@ -422,22 +422,50 @@ function Home() {
               }}
             >
               <Fade left cascade duration={3000}>
-                <SiJavascript title="JavaScript" />
-                <FaNode title="Node.js" />
-                <SiExpress title="express.js" />
-                <SiReact title="React.js" />
-                <SiHtml5 title="HTML" />
-                <SiCss3 title="CSS" />
-                <SiDocker title="Docker" />
+                <button className="raise">
+                  <SiJavascript title="JavaScript" />
+                </button>
+                <button className="raise">
+                  <FaNode title="Node.js" />
+                </button>
+                <button className="raise">
+                  <SiExpress title="express.js" />
+                </button>
+                <button className="raise">
+                  <SiReact title="React.js" />
+                </button>
+                <button className="raise">
+                  <SiHtml5 title="HTML" />
+                </button>
+                <button className="raise">
+                  <SiCss3 title="CSS" />
+                </button>
+                <button className="raise">
+                  <SiDocker title="Docker" />
+                </button>
               </Fade>
               <Fade right cascade duration={3000}>
-                <SiVisualstudiocode title="VSCode" />
-                <SiLinux title="Linux" />
-                <SiGit title="Git" />
-                <SiMongodb title="MongoDB" />
-                <SiRos title="ROS" />
-                <SiTensorflow title="TensorFlow" />
-                <SiNumpy title="Numpy" />
+                <button className="raise">
+                  <SiVisualstudiocode title="VSCode" />
+                </button>
+                <button className="raise">
+                  <SiLinux title="Linux" />
+                </button>
+                <button className="raise">
+                  <SiGit title="Git" />
+                </button>
+                <button className="raise">
+                  <SiMongodb title="MongoDB" />
+                </button>
+                <button className="raise">
+                  <SiRos title="ROS" />
+                </button>
+                <button className="raise">
+                  <SiTensorflow title="TensorFlow" />
+                </button>
+                <button className="raise">
+                  <SiNumpy title="Numpy" />
+                </button>
               </Fade>
             </div>
           </Container>
