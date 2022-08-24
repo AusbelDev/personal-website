@@ -107,7 +107,7 @@ const projects = [
       "Deep Learningn implementation on an autonomous vehicle for strawberry production estimation",
     description:
       "A deep learning implementation on an autonomous vehicle for strawberry production estimation.",
-    image: "/rover.jpg",
+    image: "rover.jpg",
     status: "Finished",
   },
 ];
@@ -150,7 +150,6 @@ function Home() {
   const inputRef = useRef();
   const [scrolled, setScrolled] = useState(false);
   useEffect(() => {
-    console.log(inputRef.current);
     inputRef.current.addEventListener("scroll", () => {
       if (inputRef.current.scrollTop > 100) {
         setScrolled(true);

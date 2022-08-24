@@ -2,7 +2,7 @@
   "name": "personal-website",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://ausbeldev.github.io/webpage",
+  "homepage": "https://ausbeldev.github.io/personal-website",
   "dependencies": {
     "@emailjs/browser": "^3.6.2",
     "@emotion/react": "^11.10.0",

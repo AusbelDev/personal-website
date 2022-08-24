@@ -2,6 +2,7 @@ import "./Form.css";
 import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import SpringModal from "./Modal";
+import SnackBar from "./SnackBar";
 
 function Form() {
   const form = useRef();
@@ -13,6 +14,9 @@ function Form() {
   const [open, setOpen] = useState(false);
   const handleOpen = () => setOpen(true);
   const handleClose = () => setOpen(false);
+  const [sent, setSent] = useState(false);
+  const handleSent = () => setSent(true);
+  const closeSent = () => setSent(false);
 
   const handleChange = (e) => {
     setName({ ...form_content, [e.target.name]: e.target.value });
@@ -38,6 +42,9 @@ function Form() {
         .then(
           (result) => {
             console.log(result.text);
+            if (result.text === "OK") {
+              handleSent();
+            }
           },
           (error) => {
             console.log(error.text);
@@ -89,7 +96,11 @@ function Form() {
           Submit
         </button>
       </form>
-      {open ? <SpringModal open={open} handleClose={handleClose} /> : null}
+      {open ? (
+        <SpringModal open={open} handleClose={handleClose} />
+      ) : (
+        <SnackBar sent={sent} closeSent={closeSent} />
+      )}
     </div>
   );
 }
