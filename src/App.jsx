@@ -10,7 +10,7 @@ const darkTheme = createTheme({
 function App() {
   return (
     <ThemeProvider theme={darkTheme}>
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router basename="/personal-website">
         <AnimatedRoutes />
       </Router>
     </ThemeProvider>
