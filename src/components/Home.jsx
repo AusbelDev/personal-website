@@ -32,6 +32,7 @@ import {
 } from "react-icons/si";
 import { FaNode } from "react-icons/fa";
 import ScrollTop from "./ScrollTop";
+import { useKeyboardOffset } from "virtual-keyboard-offset";
 
 const animationConfiguration = {
   initial: { opacity: 0 },
@@ -158,6 +159,8 @@ function Home() {
       }
     });
   }, []);
+  const { keyBoardOffset, windowHeight } = useKeyboardOffset();
+  console.log(keyBoardOffset, windowHeight);
 
   return (
     <motion.div
@@ -188,7 +191,7 @@ function Home() {
       >
         <div style={{ width: "auto" }}>
           <h1 className="head-span">Welcome to my world!</h1>
-          <h1 className="head">I'am Λusbel</h1>
+          <h1 className="head">I am Λusbel</h1>
           <TextList />
         </div>
         <Glitch />

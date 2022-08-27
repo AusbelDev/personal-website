@@ -1,5 +1,5 @@
 import { ThemeProvider, createTheme } from "@mui/material/styles";
-import { BrowserRouter as Router } from "react-router-dom";
+import { HashRouter as Router } from "react-router-dom";
 import AnimatedRoutes from "./components/AnimatedRoutes";
 const darkTheme = createTheme({
   palette: {
@@ -10,7 +10,7 @@ const darkTheme = createTheme({
 function App() {
   return (
     <ThemeProvider theme={darkTheme}>
-      <Router basename={process.env.PUBLIC_URL}>
+      <Router>
         <AnimatedRoutes />
       </Router>
     </ThemeProvider>

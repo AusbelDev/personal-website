@@ -13,6 +13,7 @@ import MenuItem from "@mui/material/MenuItem";
 import { SiLinkedin, SiInstagram, SiTwitter, SiGithub } from "react-icons/si";
 import useMediaQuery from "@mui/material/useMediaQuery";
 import { TbSocial } from "react-icons/tb";
+import { HashLink } from "react-router-hash-link";
 // import CodeIcon from "@mui/icons-material/Code";
 // import { NearMeDisabledTwoTone } from "@mui/icons-material";
 
@@ -66,11 +67,12 @@ const ResponsiveAppBar = () => {
       <Container maxWidth="xl">
         <Toolbar disableGutters id="back-to-top-anchor">
           {/* <CodeIcon sx={{ display: { xs: "none", md: "flex" }, mr: 1 }} /> */}
+
           <Typography
             variant="h6"
             noWrap
             component="a"
-            href="/personal-website"
+            href="/personal-website/#"
             sx={{
               mr: 2,
               display: { xs: "none", md: "flex" },
@@ -120,18 +122,19 @@ const ResponsiveAppBar = () => {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Button
-                    href={`#${page}`}
-                    sx={{
-                      color: "white",
-                      display: "block",
-                      fontFamily: "Kanit, sans-serif",
-                    }}
-                  >
-                    <Typography textAlign="center" sx={{ fontSize: "3vw" }}>
-                      {page}
-                    </Typography>
-                  </Button>
+                  <HashLink smooth to={`/home#${page}`}>
+                    <Button
+                      sx={{
+                        color: "white",
+                        display: "block",
+                        fontFamily: "Kanit, sans-serif",
+                      }}
+                    >
+                      <Typography textAlign="center" sx={{ fontSize: "3vw" }}>
+                        {page}
+                      </Typography>
+                    </Button>
+                  </HashLink>
                 </MenuItem>
               ))}
             </Menu>
@@ -141,7 +144,7 @@ const ResponsiveAppBar = () => {
             variant="h5"
             noWrap
             component="a"
-            href="/personal-website"
+            href="/personal-website/#"
             sx={{
               mr: 2,
               display: { xs: "flex", md: "none" },
@@ -158,19 +161,20 @@ const ResponsiveAppBar = () => {
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
               // <a href={`#${page}`} key={page}>
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{
-                  my: 2,
-                  color: "white",
-                  display: "block",
-                  fontFamily: "Kanit, sans-serif",
-                }}
-                href={`#${page}`}
-              >
-                {page}
-              </Button>
+              <HashLink smooth to={`/home#${page}`}>
+                <Button
+                  key={page}
+                  onClick={handleCloseNavMenu}
+                  sx={{
+                    my: 2,
+                    color: "white",
+                    display: "block",
+                    fontFamily: "Kanit, sans-serif",
+                  }}
+                >
+                  {page}
+                </Button>
+              </HashLink>
               // </a>
             ))}
           </Box>
